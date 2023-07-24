@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'estilos.css' %}">
+
+</head>
+<body>
+    <h1>FORMULARIO DE CLASE</h1>
+    <form action="contador" method="POST">
+        <legend>Escribe tus sueños aquí: </legend>
+        {% csrf_token %}
+        <textarea name="texto" rows="4" cols="100"></textarea>
+        <input type="submit" value="enviar">
+
+    </form>
+
+</body>
+</html>
